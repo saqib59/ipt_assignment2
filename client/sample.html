@@ -107,7 +107,8 @@
                 dataa[this.value] = $(this).parent().next().next().children().val();
             }
         });
-        if (dataa.length == 0) {
+
+        if ($('[id^=subjectMarksObtained]').val() == '' || $('[id^=subjectName]').val() == '') {
             alert('Please fill out all fields');
             return false;
         }
